@@ -1,0 +1,14 @@
+/*
+    (C) Jani Haiko, 2018
+*/
+
+textarea{
+    width: 500px;
+    height: 300px;
+    float: left;
+    margin: 25px;
+}
+#buttons{
+    float: left;
+    clear: both;
+}

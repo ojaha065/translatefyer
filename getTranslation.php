@@ -11,13 +11,25 @@
     $translate = new TranslateClient([
         "projectId" => $projectId
     ]);
+    $availableLanguages = $translate->languages();
 
-    $text = $_POST["sourceText"];
-    $target = "en";
+    $iterations = 10;
+    $languages = array();
+    for($i = 0; $i < $iterations;$i++){
+        $languages[$i] = $availableLanguages[rand(0,count($availableLanguages))];
+    }
+    
+    $text = htmlspecialchars($_POST["sourceText"]);
+    $originalLanguage = $translate->detectLanguage($text);
+    $originalLanguage = $originalLanguage["languageCode"];
+    $languages[$iterations + 1] = $originalLanguage;
 
-    $result = $translate->translate($text,[
-        "target" => $target
-    ]);
+    foreach($languages as $target){
+        $result = $translate->translate($text,[
+            "target" => $target
+        ]);
+        $text = $result["text"];
+    }
 
-    echo json_encode($result);
+    echo $text;
 ?>

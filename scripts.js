@@ -6,6 +6,7 @@
 
 $(document).ready(function(){
     $("#translatefyButton").click(function(){
+        $(this).prop("disabled",true);
         var sourceText = $("#sourceText").val();
 
         $.ajax({
@@ -15,11 +16,18 @@ $(document).ready(function(){
                 sourceText: sourceText
             },
             success: function(result){
-                console.log(result);
+                console.info("Got result!");
+                $("#resultText").val(result);
+                $(this).prop("disabled",false);
             },
             error: function(error){
                 console.error(error.status + ": " + error.statusText);
+                $(this).prop("disabled",false);
             }
         });
+    });
+    $("#clearButton").click(function(){
+        $("#sourceText").val("");
+        $("#resultText").val("");
     });
 });

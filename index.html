@@ -6,12 +6,17 @@
     <head>
         <meta charset="UTF-8" />
         <title>Google translatefyer</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="scripts.js"></script>
     </head>
     <body>
         <noscript>Please allow JavaScript on this page.</noscript>
         <textarea id="sourceText"></textarea>
-        <button type="button" id="translatefyButton">Translatefy!</button>
+        <textarea id="resultText" readonly></textarea>    
+        <div id="buttons">
+            <button type="button" id="translatefyButton">Translatefy!</button>
+            <button type="reset" id="clearButton">Clear</button>
+        </div>
     </body>
 </html>
