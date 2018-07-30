@@ -3,7 +3,28 @@
         (C) Jani Haiko, 2018
     */
 
-    if(!isset($_POST["iterations"]) || isset($_POST["sourceText"]))
+    if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"]) || strtolower($_SERVER["HTTP_X_REQUESTED_WITH"]) != "xmlhttprequest"){
+        echo "Error occured: Access Denied";
+        die("Access Denied");
+    }
+    if(!isset($_POST["iterations"]) || !isset($_POST["sourceText"])){
+        echo "Error occured: valuesNotSet";
+        die("valuesNotSet");
+    }
+
+    session_start();
+    if(isset($_SESSION["lastRequest"])){
+        if(time() - $_SESSION["lastRequest"] > 8){
+            echo "Hey Sonic, you are going way too fast!&#13;&#10;&#13;&#10;(You're sending too many requests.)";
+            die("tooManyRequests");
+        }
+        else{
+            $_SESSION["lastRequest"] = time();
+        }
+    }
+    else{
+        $_SESSION["lastRequest"] = time();
+    }
 
     require "vendor/autoload.php";
     use Google\Cloud\Translate\TranslateClient;
