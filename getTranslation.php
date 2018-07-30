@@ -5,18 +5,18 @@
 
     if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"]) || strtolower($_SERVER["HTTP_X_REQUESTED_WITH"]) != "xmlhttprequest"){
         echo "Error occured: Access Denied";
-        die("Access Denied");
+        die();
     }
     if(!isset($_POST["iterations"]) || !isset($_POST["sourceText"])){
         echo "Error occured: valuesNotSet";
-        die("valuesNotSet");
+        die();
     }
 
     session_start();
     if(isset($_SESSION["lastRequest"])){
-        if(time() - $_SESSION["lastRequest"] > 8){
-            echo "Hey Sonic, you are going way too fast!&#13;&#10;&#13;&#10;(You're sending too many requests.)";
-            die("tooManyRequests");
+        if(time() - $_SESSION["lastRequest"] < 5){
+            echo "Hey Sonic, you are going way too fast! (You're sending too many requests.)";
+            die();
         }
         else{
             $_SESSION["lastRequest"] = time();
