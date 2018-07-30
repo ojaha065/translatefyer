@@ -2,13 +2,52 @@
     (C) Jani Haiko, 2018
 */
 
+body{
+    margin: 0;
+    width: 100%;
+    max-width: 960px;
+}
+
+#info{
+    margin: 1%;
+}
+noscript{
+    color: red;
+}
+
 textarea{
-    width: 500px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 98%;
     height: 300px;
-    float: left;
-    margin: 25px;
+    margin: 1% 1% 0 1%;
+}
+small{
+    margin-left: 1%;
 }
 #buttons{
     float: left;
     clear: both;
+    margin: 10px 0 25px 1%;
+}
+
+#settings{
+    width: 100%;
+    float: left;
+    clear: both;
+}
+fieldset{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+#github{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
 }

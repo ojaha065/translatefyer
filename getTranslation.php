@@ -3,6 +3,8 @@
         (C) Jani Haiko, 2018
     */
 
+    if(!isset($_POST["iterations"]) || isset($_POST["sourceText"]))
+
     require "vendor/autoload.php";
     use Google\Cloud\Translate\TranslateClient;
 
@@ -13,7 +15,7 @@
     ]);
     $availableLanguages = $translate->languages();
 
-    $iterations = 10;
+    $iterations = $_POST["iterations"];
     $languages = array();
     for($i = 0; $i < $iterations;$i++){
         $languages[$i] = $availableLanguages[rand(0,count($availableLanguages))];

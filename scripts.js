@@ -7,22 +7,27 @@
 $(document).ready(function(){
     $("#translatefyButton").click(function(){
         $(this).prop("disabled",true);
+        $(this).html("Please wait...");
         var sourceText = $("#sourceText").val();
+        var iterations = Number($("#iterations").val());
 
         $.ajax({
             method: "POST",
             url: "getTranslation.php",
             data: {
-                sourceText: sourceText
+                sourceText: sourceText,
+                iterations: iterations
             },
             success: function(result){
                 console.info("Got result!");
                 $("#resultText").val(result);
-                $(this).prop("disabled",false);
+                $("#translatefyButton").html("Translatefy!");
+                $("#translatefyButton").prop("disabled",false);
             },
             error: function(error){
                 console.error(error.status + ": " + error.statusText);
-                $(this).prop("disabled",false);
+                $("#translatefyButton").html("Translatefy!");
+                $("#translatefyButton").prop("disabled",false);
             }
         });
     });
