@@ -35,4 +35,13 @@ $(document).ready(function(){
         $("#sourceText").val("");
         $("#resultText").val("");
     });
+
+    $("#sourceText").on("change keyup paste",function(){
+        if($(this).val().length > 1100){
+            $("#errorArea").html("Maximum length of the input is 1200 characters. You have used " + $("#sourceText").val().length + " characters.<br />").show();
+        }
+        else{
+            $("#errorArea").hide();
+        }
+    });
 });

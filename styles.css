@@ -15,6 +15,11 @@ noscript{
     color: red;
 }
 
+#errorArea{
+    display: none;
+    color: red;
+}
+
 textarea{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;

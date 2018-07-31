@@ -11,6 +11,10 @@
         echo "Error occured: valuesNotSet";
         die();
     }
+    if(strlen($_POST["sourceText"]) > 1200 || $_POST["iterations"] > 10){
+        echo "Error occured: tooLongInput";
+        die();
+    }
 
     session_start();
     if(isset($_SESSION["lastRequest"])){
@@ -49,7 +53,8 @@
 
     foreach($languages as $target){
         $result = $translate->translate($text,[
-            "target" => $target
+            "target" => $target,
+            "format" => "text"
         ]);
         $text = $result["text"];
     }

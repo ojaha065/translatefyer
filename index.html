@@ -26,7 +26,8 @@
             <p><b>How does it work?</b> It's just using <a href="https://cloud.google.com/translate/" target="_blank">Google's translation API</a>. For more technical details, you can check it's <a href="https://github.com/ojaha065/translatefyer">GitHub page</a>.</p>
             <p><b>How is/are behind this? I want to contact you. How I can do that?</b> I'm just a IT-student from Finland. Feel free to to shoot me an email: haiko.jani [at] gmail [dot] com.</p>
         </div>
-        <textarea id="sourceText" placeholder="Type or paste here."></textarea>
+        <textarea id="sourceText" maxlength="1200" placeholder="Type or paste here."></textarea>
+        <small id="errorArea"></small>
         <small>Tip: You can type in any language. The result will be in the same language. (Providing that Google detected the language correctly.)</small>
         <textarea id="resultText" placeholder="The translatefyed text will be here." readonly></textarea>    
         <div id="buttons">
