@@ -31,6 +31,12 @@ textarea{
 small{
     margin-left: 1%;
 }
+#languages_wrapper{
+    float: left;
+    clear: both;
+    display: none;
+}
+
 #buttons{
     float: left;
     clear: both;

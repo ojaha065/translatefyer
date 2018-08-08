@@ -3,23 +3,46 @@
         (C) Jani Haiko, 2018
     */
 
+    session_start();
+
+    header("Content-Type: application/json;charset=UTF-8");
+    $dataToSend = array();
+
+    if(!isset($_SESSION["secretKey"]) && $_SESSION["secretKey"] == "[HIDDEN FOR GITHUB]"){
+        $dataToSend["code"] = 403;
+        $dataToSend["status"] = "Forbidden";
+        $dataToSend["reason"] = "Invalid secretKey";
+        echo json_encode($dataToSend);
+        die();
+    }
     if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"]) || strtolower($_SERVER["HTTP_X_REQUESTED_WITH"]) != "xmlhttprequest"){
-        echo "Error occured: Access Denied";
+        $dataToSend["code"] = 400;
+        $dataToSend["status"] = "Bad Request";
+        $dataToSend["reason"] = "Wrong HTTP_X_REQUESTED_WITH";
+        echo json_encode($dataToSend);
         die();
     }
     if(!isset($_POST["iterations"]) || !isset($_POST["sourceText"])){
-        echo "Error occured: valuesNotSet";
+        $dataToSend["code"] = 400;
+        $dataToSend["status"] = "Bad Request";
+        $dataToSend["reason"] = "Values not set";
+        echo json_encode($dataToSend);
         die();
     }
     if(strlen($_POST["sourceText"]) > 1200 || $_POST["iterations"] > 10){
-        echo "Error occured: tooLongInput";
+        $dataToSend["code"] = 413;
+        $dataToSend["status"] = "Payload Too Large";
+        $dataToSend["reason"] = "The input is too long";
+        echo json_encode($dataToSend);
         die();
     }
 
-    session_start();
     if(isset($_SESSION["lastRequest"])){
         if(time() - $_SESSION["lastRequest"] < 5){
-            echo "Hey Sonic, you are going way too fast! (You're sending too many requests.)";
+            $dataToSend["code"] = 429;
+            $dataToSend["status"] = "Too Many Requests";
+            $dataToSend["reason"] = "You're sending too many requests";
+            echo json_encode($dataToSend);
             die();
         }
         else{
@@ -51,13 +74,21 @@
     $originalLanguage = $originalLanguage["languageCode"];
     $languages[$iterations + 1] = $originalLanguage;
 
+    $allLanguages = array();
+    $allLanguages[0] = $originalLanguage;
+
     foreach($languages as $target){
         $result = $translate->translate($text,[
             "target" => $target,
             "format" => "text"
         ]);
         $text = $result["text"];
+        $allLanguages[] = $target;
     }
 
-    echo $text;
+    $dataToSend["code"] = 200;
+    $dataToSend["status"] = "OK";
+    $dataToSend["translation"] = $text;
+    $dataToSend["languages"] = $allLanguages;
+    echo json_encode($dataToSend);
 ?>

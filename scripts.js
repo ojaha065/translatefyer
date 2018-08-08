@@ -4,9 +4,9 @@
     (C) Jani Haiko, 2018
 */
 
-if(location.protocol != "https:"){
-    location.replace("https:" + window.location.href.substring(window.location.protocol.length));
-}
+//if(location.protocol != "https:"){
+    //location.replace("https:" + window.location.href.substring(window.location.protocol.length));
+//}
 
 $(document).ready(function(){
     $("#translatefyButton").click(function(){
@@ -23,13 +23,36 @@ $(document).ready(function(){
                 iterations: iterations
             },
             success: function(result){
-                console.info("Got result!");
-                $("#resultText").val(result);
+                $("#languages").html("");
+                switch(result.code){
+                    case 200:
+                        $("#resultText").val(result.translation);
+                        for(var i in result.languages){
+                            var thisLanguage = "";
+                            try{
+                                thisLanguage = isoLangs[result.languages[i]].name;
+                            }
+                            catch(error){
+                                thisLanguage = result.languages[i];
+                            }
+                            $("#languages").html($("#languages").html() + thisLanguage + " &rarr; ");
+                        }
+                        $("#languages").html($("#languages").html().slice(0,-3));
+                        $("#languages_wrapper").show();
+                        break;
+                    case 429:
+                        $("#resultText").val("Hey Sonic, you are going way too fast! (You're sending too many requests.)");
+                        break;
+                    default:
+                    console.error(result.code + ": " + error.status);
+                    console.info(result.reason);
+                }
                 $("#translatefyButton").html("Translatefy!");
                 $("#translatefyButton").prop("disabled",false);
             },
             error: function(error){
                 console.error(error.status + ": " + error.statusText);
+                window.alert("An error occured. Please try again.");
                 $("#translatefyButton").html("Translatefy!");
                 $("#translatefyButton").prop("disabled",false);
             }

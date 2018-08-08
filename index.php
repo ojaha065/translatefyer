@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $_SESSION["secretKey"] = "[HIDDEN FOR GITHUB]";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <!--
@@ -15,6 +20,7 @@
         <meta name="rating" content="General" />
         <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="languageCodes.js" async></script>
         <script src="scripts.js"></script>
     </head>
     <body>
@@ -26,10 +32,11 @@
             <p><b>How does it work?</b> It's just using <a href="https://cloud.google.com/translate/" target="_blank">Google's translation API</a>. For more technical details, you can check it's <a href="https://github.com/ojaha065/translatefyer" target="_blank">GitHub page</a>.</p>
             <p><b>How is/are behind this? I want to contact you. How I can do that?</b> I'm just a IT-student from Finland. Feel free to to shoot me an email: haiko.jani [at] gmail [dot] com.</p>
         </div>
-        <textarea id="sourceText" maxlength="1200" placeholder="Type or paste here."></textarea>
+        <textarea id="sourceText" maxlength="1200" placeholder="Type or paste here." required></textarea>
         <small id="errorArea"></small>
         <small>Tip: You can type in any language. The result will be in the same language. (Providing that Google detected the language correctly.)</small>
         <textarea id="resultText" placeholder="The translatefyed text will be here." readonly></textarea>    
+        <small id="languages_wrapper">The input went throught following translations: <span id="languages"></span></small>
         <div id="buttons">
             <button type="button" id="translatefyButton">Translatefy!</button>
             <button type="reset" id="clearButton">Clear</button>
