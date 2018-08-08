@@ -4,9 +4,9 @@
     (C) Jani Haiko, 2018
 */
 
-//if(location.protocol != "https:"){
-    //location.replace("https:" + window.location.href.substring(window.location.protocol.length));
-//}
+if(location.protocol != "https:"){
+    location.replace("https:" + window.location.href.substring(window.location.protocol.length));
+}
 
 $(document).ready(function(){
     $("#translatefyButton").click(function(){
