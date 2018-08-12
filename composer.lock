@@ -101,16 +101,16 @@
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.21.1",
+            "version": "v1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GoogleCloudPlatform/google-cloud-php-core.git",
-                "reference": "4dee63d2baf793d3798cc7e420004102a49b0a71"
+                "reference": "0cbcc31593b2d2fdc11dd819c4952b0ac4b4b483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php-core/zipball/4dee63d2baf793d3798cc7e420004102a49b0a71",
-                "reference": "4dee63d2baf793d3798cc7e420004102a49b0a71",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php-core/zipball/0cbcc31593b2d2fdc11dd819c4952b0ac4b4b483",
+                "reference": "0cbcc31593b2d2fdc11dd819c4952b0ac4b4b483",
                 "shasum": ""
             },
             "require": {
@@ -156,20 +156,20 @@
                 "Apache-2.0"
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
-            "time": "2018-07-19T17:51:07+00:00"
+            "time": "2018-08-08T15:42:37+00:00"
         },
         {
             "name": "google/cloud-translate",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GoogleCloudPlatform/google-cloud-php-translate.git",
-                "reference": "e7be21d039b3ad354cffc0ebd76afce5b32f544c"
+                "reference": "1d4029599994c5c144a8f9c4a3f2488b085de3a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php-translate/zipball/e7be21d039b3ad354cffc0ebd76afce5b32f544c",
-                "reference": "e7be21d039b3ad354cffc0ebd76afce5b32f544c",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php-translate/zipball/1d4029599994c5c144a8f9c4a3f2488b085de3a5",
+                "reference": "1d4029599994c5c144a8f9c4a3f2488b085de3a5",
                 "shasum": ""
             },
             "require": {
@@ -200,7 +200,7 @@
                 "Apache-2.0"
             ],
             "description": "Cloud Transation Client for PHP",
-            "time": "2018-07-03T15:31:33+00:00"
+            "time": "2018-08-08T15:42:37+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

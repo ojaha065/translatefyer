@@ -229,7 +229,7 @@ var isoLangs = {
         "nativeName":"Hausa, هَوُسَ"
     },
     "he":{
-        "name":"Hebrew (modern)",
+        "name":"Hebrew",
         "nativeName":"עברית"
     },
     "hz":{
@@ -329,7 +329,7 @@ var isoLangs = {
         "nativeName":"Ikinyarwanda"
     },
     "ky":{
-        "name":"Kirghiz, Kyrgyz",
+        "name":"Kirghiz",
         "nativeName":"кыргыз тили"
     },
     "kv":{
@@ -738,5 +738,11 @@ var isoLangs = {
     },
     "jw":{
         "name":"Javanese"
+    },
+    "iw":{
+        "name":"Hebrew"
+    },
+    "zu":{
+        "name":"Zulu"
     }
 }

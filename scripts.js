@@ -41,10 +41,6 @@ $(document).ready(function(){
                         }
                         $("#languages").html($("#languages").html().slice(0,-3));
                         $("#languages_wrapper").show();
-
-                        if(!result.isReliable){
-                            $("#resultText").val("Notice: We couldn't determine the language of the input realiably. We're guessing it's " + isoLangs[result.languages[0]].name + ".\r\n\r\n\r\n" + $("#resultText").val());
-                        }
                         break;
                     case 429:
                         $("#resultText").val("Hey Sonic, you are going way too fast! (You're sending too many requests.)");

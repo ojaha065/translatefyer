@@ -71,12 +71,6 @@
     
     $text = htmlspecialchars($_POST["sourceText"]);
     $originalLanguage = $translate->detectLanguage($text);
-    if($originalLanguage["confidence"] < 0.80){
-        $isReliable = false;
-    }
-    else{
-        $isReliable = true;
-    }
     $originalLanguage = $originalLanguage["languageCode"];
     $languages[$iterations + 1] = $originalLanguage;
 
@@ -108,6 +102,5 @@
     $dataToSend["status"] = "OK";
     $dataToSend["translation"] = $text;
     $dataToSend["languages"] = $allLanguages;
-    $dataToSend["isReliable"] = $isReliable;
     echo json_encode($dataToSend);
 ?>
