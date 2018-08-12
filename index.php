@@ -37,6 +37,7 @@
         <small>Tip: The input can be in almost any language. The result will be in the same language. (Providing that Google detected the language correctly.)</small>
         <textarea id="resultText" placeholder="The translatefyed text will be here." readonly></textarea>    
         <small id="languages_wrapper">The input went throught following translations: <span id="languages"></span></small>
+        <br />
         <div id="buttons">
             <button type="button" id="translatefyButton">Translatefy!</button>
             <button type="reset" id="clearButton">Clear</button>
