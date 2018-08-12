@@ -1,5 +1,6 @@
 /**
  * @author Phil Teare
+ * Modifyed by Jani Haiko
  * using wikipedia data
  */
 var isoLangs = {
@@ -116,7 +117,7 @@ var isoLangs = {
         "nativeName":"нохчийн мотт"
     },
     "ny":{
-        "name":"Chichewa; Chewa; Nyanja",
+        "name":"Chichewa",
         "nativeName":"chiCheŵa, chinyanja"
     },
     "zh":{
@@ -152,7 +153,7 @@ var isoLangs = {
         "nativeName":"dansk"
     },
     "dv":{
-        "name":"Divehi; Dhivehi; Maldivian;",
+        "name":"Divehi",
         "nativeName":"ދިވެހި"
     },
     "nl":{
@@ -192,7 +193,7 @@ var isoLangs = {
         "nativeName":"français, langue française"
     },
     "ff":{
-        "name":"Fula; Fulah; Pulaar; Pular",
+        "name":"Fula",
         "nativeName":"Fulfulde, Pulaar, Pular"
     },
     "gl":{
@@ -220,7 +221,7 @@ var isoLangs = {
         "nativeName":"ગુજરાતી"
     },
     "ht":{
-        "name":"Haitian; Haitian Creole",
+        "name":"Haitian",
         "nativeName":"Kreyòl ayisyen"
     },
     "ha":{
@@ -348,7 +349,7 @@ var isoLangs = {
         "nativeName":"Kurdî, كوردی‎"
     },
     "kj":{
-        "name":"Kwanyama, Kuanyama",
+        "name":"Kwanyama",
         "nativeName":"Kuanyama"
     },
     "la":{
@@ -356,7 +357,7 @@ var isoLangs = {
         "nativeName":"latine, lingua latina"
     },
     "lb":{
-        "name":"Luxembourgish, Letzeburgesch",
+        "name":"Luxembourgish",
         "nativeName":"Lëtzebuergesch"
     },
     "lg":{
@@ -364,7 +365,7 @@ var isoLangs = {
         "nativeName":"Luganda"
     },
     "li":{
-        "name":"Limburgish, Limburgan, Limburger",
+        "name":"Limburgish",
         "nativeName":"Limburgs"
     },
     "ln":{
@@ -416,7 +417,7 @@ var isoLangs = {
         "nativeName":"te reo Māori"
     },
     "mr":{
-        "name":"Marathi (Marāṭhī)",
+        "name":"Marathi",
         "nativeName":"मराठी"
     },
     "mh":{
@@ -476,7 +477,7 @@ var isoLangs = {
         "nativeName":"ᐊᓂᔑᓈᐯᒧᐎᓐ"
     },
     "cu":{
-        "name":"Old Church Slavonic, Church Slavic, Church Slavonic, Old Bulgarian, Old Slavonic",
+        "name":"Old Church Slavonic",
         "nativeName":"ѩзыкъ словѣньскъ"
     },
     "om":{
@@ -528,7 +529,7 @@ var isoLangs = {
         "nativeName":"kiRundi"
     },
     "ro":{
-        "name":"Romanian, Moldavian, Moldovan",
+        "name":"Romanian",
         "nativeName":"română"
     },
     "ru":{
@@ -592,7 +593,7 @@ var isoLangs = {
         "nativeName":"Sesotho"
     },
     "es":{
-        "name":"Spanish; Castilian",
+        "name":"Spanish",
         "nativeName":"español, castellano"
     },
     "su":{
@@ -672,7 +673,7 @@ var isoLangs = {
         "nativeName":"Reo Tahiti"
     },
     "ug":{
-        "name":"Uighur, Uyghur",
+        "name":"Uighur",
         "nativeName":"Uyƣurqə, ئۇيغۇرچە‎"
     },
     "uk":{
@@ -728,7 +729,14 @@ var isoLangs = {
         "nativeName":"Yorùbá"
     },
     "za":{
-        "name":"Zhuang, Chuang",
+        "name":"Zhuang",
         "nativeName":"Saɯ cueŋƅ, Saw cuengh"
+    },
+    ///
+    "ceb":{
+        "name":"Cebuano"
+    },
+    "jw":{
+        "name":"Javanese"
     }
 }
