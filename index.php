@@ -56,9 +56,18 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                    <small>Translation from language X to Y = one iteration. Recommended values are from 3 to 5. The larger the value is, the longer the translatefying process will take.</small>
                     <br />
-                    <small><a href="login/index.php">Manage</a></small>
+                    <small>Translation from language X to Y = one iteration. Recommended values are from 3 to 5. The larger the value is, the longer the translatefying process will take.</small>
+                    <hr />
+                    <label for="model">Translation model:</label>
+                    <select id="model">
+                        <option value="nmt" selected>Neural Machine Translation</option>
+                        <option value="base">Phrase-Based Machine Translation</option>
+                    </select>
+                    <br />
+                    <small>Google offers two different machine translation models. I like to think them as a to different translation engines. Using the Neural Machine Translation (NMT) model usually provides more accurate translations than the phrase-based one but the translation(s) also take twice (or more) as long.</small>
+                    <hr />
+                    <small><a href="login/index.php">Admin settings</a></small>
                 </fieldset>
             </form>
         </div>

@@ -14,13 +14,15 @@ $(document).ready(function(){
         $(this).html("Please wait...");
         var sourceText = $("#sourceText").val();
         var iterations = Number($("#iterations").val());
+        var model = $("#model").val();
 
         $.ajax({
             method: "POST",
             url: "getTranslation.php",
             data: {
                 sourceText: sourceText,
-                iterations: iterations
+                iterations: iterations,
+                model: model
             },
             success: function(result){
                 $("#languages").html("");

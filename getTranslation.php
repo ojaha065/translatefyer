@@ -22,7 +22,7 @@
         echo json_encode($dataToSend);
         die();
     }
-    if(!isset($_POST["iterations"]) || !isset($_POST["sourceText"])){
+    if(!isset($_POST["iterations"]) || !isset($_POST["sourceText"]) || !isset($_POST["model"])){
         $dataToSend["code"] = 400;
         $dataToSend["status"] = "Bad Request";
         $dataToSend["reason"] = "Values not set";
@@ -77,10 +77,22 @@
     $allLanguages = array();
     $allLanguages[0] = $originalLanguage;
 
+    if($_POST["model"] === "nmt" || $_POST["model"] === "base"){
+        $model = $_POST["model"];
+    }
+    else{
+        $dataToSend["code"] = 400;
+        $dataToSend["status"] = "Bad Request";
+        $dataToSend["reason"] = "Wrong model";
+        echo json_encode($dataToSend);
+        die();
+    }
+
     foreach($languages as $target){
         $result = $translate->translate($text,[
             "target" => $target,
-            "format" => "text"
+            "format" => "text",
+            "model" => $model
         ]);
         $text = $result["text"];
         $allLanguages[] = $target;

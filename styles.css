@@ -31,6 +31,9 @@ textarea{
 small{
     margin-left: 1%;
 }
+#settings small{
+    margin: unset;
+}
 #languages_wrapper{
     float: left;
     clear: both;
