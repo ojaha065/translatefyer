@@ -36,6 +36,13 @@
         echo json_encode($dataToSend);
         die();
     }
+    if(strlen($_POST["sourceText"]) < 5){
+        $dataToSend["code"] = 400;
+        $dataToSend["status"] = "Bad Request";
+        $dataToSend["reason"] = "The input is too short";
+        echo json_encode($dataToSend);
+        die();
+    }
 
     if(isset($_SESSION["lastRequest"])){
         if(time() - $_SESSION["lastRequest"] < 5){

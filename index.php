@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <!--
-        (C) Jani Haiko, 2018
+        (C) Jani Haiko, 2018 - 2019
         https://github.com/ojaha065/translatefyer
     -->
     <head>
@@ -19,7 +19,7 @@
         <meta name="revised" content="Sunday, August 12th, 2018" />
         <meta name="rating" content="General" />
         <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="languageCodes.js" async></script>
         <script src="scripts.js"></script>
     </head>
@@ -39,7 +39,7 @@
         <small id="languages_wrapper">The input went throught following translations: <span id="languages"></span></small>
         <br />
         <div id="buttons">
-            <button type="button" id="translatefyButton">Translatefy!</button>
+            <button type="button" id="translatefyButton" disabled>Translatefy!</button>
             <button type="reset" id="clearButton">Clear</button>
         </div>
         <div id="settings">

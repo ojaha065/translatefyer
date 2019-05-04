@@ -1,7 +1,7 @@
 "use strict";
 
 /*
-    (C) Jani Haiko, 2018
+    (C) Jani Haiko, 2018 - 2019
 */
 
 if(location.protocol != "https:"){
@@ -9,7 +9,9 @@ if(location.protocol != "https:"){
 }
 
 $(document).ready(function(){
-    $("#translatefyButton").click(function(){
+    var translatefyButton = $("#translatefyButton");
+
+    translatefyButton.click(function(){
         $(this).prop("disabled",true);
         $(this).html("Please wait...");
         var sourceText = $("#sourceText").val();
@@ -49,14 +51,14 @@ $(document).ready(function(){
                     console.error(result.code + ": " + error.status);
                     console.info(result.reason);
                 }
-                $("#translatefyButton").html("Translatefy!");
-                $("#translatefyButton").prop("disabled",false);
+                translatefyButton.html("Translatefy!");
+                translatefyButton.prop("disabled",false);
             },
             error: function(error){
                 console.error(error.status + ": " + error.statusText);
                 window.alert("An error occured. Please try again.");
-                $("#translatefyButton").html("Translatefy!");
-                $("#translatefyButton").prop("disabled",false);
+                translatefyButton.html("Translatefy!");
+                translatefyButton.prop("disabled",false);
             }
         });
     });
@@ -67,10 +69,15 @@ $(document).ready(function(){
 
     $("#sourceText").on("change keyup paste",function(){
         if($(this).val().length > 1100){
+            translatefyButton.prop("disabled",true);
             $("#errorArea").html("Maximum length of the input is 1200 characters. You have used " + $("#sourceText").val().length + " characters.<br />").show();
+        }
+        else if($(this).val().length < 5){
+            translatefyButton.prop("disabled",true);
         }
         else{
             $("#errorArea").hide();
+            translatefyButton.prop("disabled",false);
         }
     });
 });
