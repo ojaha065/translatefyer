@@ -48,7 +48,7 @@ $(document).ready(function(){
                         $("#resultText").val("Hey Sonic, you are going way too fast! (You're sending too many requests.)");
                         break;
                     default:
-                    console.error(result.code + ": " + error.status);
+                    console.error(result.code);
                     console.info(result.reason);
                 }
                 translatefyButton.html("Translatefy!");
