@@ -16,7 +16,7 @@
         <meta name="keywords" content="translatefyer,translate,translation,machine translation,Google Translate" />
         <meta name="description" content="Run texts throught multiple layers of machine translation." />
         <meta name="author" content="Jani Haiko, ojaha065@edu.xamk.fi" />
-        <meta name="revised" content="Sunday, August 12th, 2018" />
+        <meta name="revised" content="Thursday, July 4th, 2018" />
         <meta name="rating" content="General" />
         <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
