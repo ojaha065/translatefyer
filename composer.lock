@@ -54,16 +54,16 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.5.1",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "0f75e20e7392e863f5550ed2c2d3d50af21710fb"
+                "reference": "2ee962e5df3e9427fda859f1b0515d6d62c4afa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/0f75e20e7392e863f5550ed2c2d3d50af21710fb",
-                "reference": "0f75e20e7392e863f5550ed2c2d3d50af21710fb",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/2ee962e5df3e9427fda859f1b0515d6d62c4afa5",
+                "reference": "2ee962e5df3e9427fda859f1b0515d6d62c4afa5",
                 "shasum": ""
             },
             "require": {
@@ -101,20 +101,20 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2019-04-16T18:48:28+00:00"
+            "time": "2019-07-22T21:01:31+00:00"
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.29.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-core.git",
-                "reference": "a7b3a821be80a86a111b7a271886faf3226a277d"
+                "reference": "c8a83c12af2c860afe86b4d7c36e38b878d8d4ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/a7b3a821be80a86a111b7a271886faf3226a277d",
-                "reference": "a7b3a821be80a86a111b7a271886faf3226a277d",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/c8a83c12af2c860afe86b4d7c36e38b878d8d4ec",
+                "reference": "c8a83c12af2c860afe86b4d7c36e38b878d8d4ec",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 "guzzlehttp/guzzle": "^5.3|^6.0",
                 "guzzlehttp/promises": "^1.3",
                 "guzzlehttp/psr7": "^1.2",
-                "monolog/monolog": "~1",
+                "monolog/monolog": "^1.1|^2.0",
                 "php": ">=5.5",
                 "psr/http-message": "1.0.*",
                 "rize/uri-template": "~0.3"
@@ -130,7 +130,7 @@
             "require-dev": {
                 "erusev/parsedown": "^1.6",
                 "google/common-protos": "^1.0",
-                "google/gax": "^1.0",
+                "google/gax": "^1.1",
                 "opis/closure": "^3",
                 "phpdocumentor/reflection": "^3.0",
                 "phpunit/phpunit": "^4.8|^5.0",
@@ -162,24 +162,24 @@
                 "Apache-2.0"
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
-            "time": "2019-06-27T20:27:31+00:00"
+            "time": "2019-09-12T22:13:37+00:00"
         },
         {
             "name": "google/cloud-translate",
-            "version": "v1.2.9",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-translate.git",
-                "reference": "d6aa2b9942525f829f812155f279d616882f7bd2"
+                "reference": "2ce7b5825d581b300b6369cd45f4583b2dedaaec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-translate/zipball/d6aa2b9942525f829f812155f279d616882f7bd2",
-                "reference": "d6aa2b9942525f829f812155f279d616882f7bd2",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-translate/zipball/2ce7b5825d581b300b6369cd45f4583b2dedaaec",
+                "reference": "2ce7b5825d581b300b6369cd45f4583b2dedaaec",
                 "shasum": ""
             },
             "require": {
-                "google/cloud-core": "^1.28"
+                "google/cloud-core": "^1.32"
             },
             "require-dev": {
                 "erusev/parsedown": "^1.6",
@@ -205,8 +205,8 @@
             "license": [
                 "Apache-2.0"
             ],
-            "description": "Cloud Transation Client for PHP",
-            "time": "2019-04-16T20:44:33+00:00"
+            "description": "Cloud Translation Client for PHP",
+            "time": "2019-08-29T21:08:15+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -397,21 +397,21 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.24.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+                "reference": "68545165e19249013afd1d6f7485aecff07a2d22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/68545165e19249013afd1d6f7485aecff07a2d22",
+                "reference": "68545165e19249013afd1d6f7485aecff07a2d22",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
+                "php": "^7.2",
+                "psr/log": "^1.0.1"
             },
             "provide": {
                 "psr/log-implementation": "1.0.0"
@@ -419,33 +419,36 @@
             "require-dev": {
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
-                "jakub-onderka/php-parallel-lint": "0.9",
+                "elasticsearch/elasticsearch": "^6.0",
+                "graylog2/gelf-php": "^1.4.2",
+                "jakub-onderka/php-parallel-lint": "^0.9",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
-                "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "2.3.0",
+                "phpspec/prophecy": "^1.6.1",
+                "phpunit/phpunit": "^8.3",
+                "predis/predis": "^1.1",
+                "rollbar/rollbar": "^1.3",
                 "ruflin/elastica": ">=0.90 <3.0",
-                "sentry/sentry": "^0.13",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "ext-mbstring": "Allow to work properly with unicode symbols",
+                "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
                 "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "sentry/sentry": "Allow sending log messages to a Sentry server"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -471,7 +474,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2018-11-05T09:00:11+00:00"
+            "time": "2019-08-30T09:56:44+00:00"
         },
         {
             "name": "psr/cache",
