@@ -24,7 +24,7 @@
         <script src="scripts.js"></script>
     </head>
     <body>
-        <div id="info">
+        <div class="info">
         <h1>Welcome to Translatefyer</h1>
             <noscript>Please allow JavaScript on this page.</noscript>
             <p><b>What is Translatefyer?</b> Translatefyer runs texts throught multiple layers of Google's machine translation. As you know, Google Translate often returns hilarious results. We just take it a step further by running the input throught Google Translator multiple times and switching languages between.</p>
@@ -42,6 +42,7 @@
             <button type="button" id="translatefyButton" disabled>Translatefy!</button>
             <button type="reset" id="clearButton">Clear</button>
         </div>
+        <p class="info">This is pretty old and crappy project written in PHP. Pressing the button above sometimes throws random errors. If that happens, just try again and it usually works fine... I might look into this some time in the future when I have extra time.</p>
         <div id="settings">
             <form>
                 <fieldset>
