@@ -43,7 +43,6 @@
             <button type="button" id="translatefyButton" disabled>Translatefy!</button>
             <button type="reset" id="clearButton">Clear</button>
         </div>
-        <p id="noticeAboutLimits" class="info"><b>Update 11/2019:</b> Due to the increased prises of Google Translate API, I implemented a new limitation. Only 2000 characters per day can be processed. This limit is shared between all users. If you get an error message, please try again after 24 hrs. I'm really sorry about this, and I'm currently considering alternatives for Google Translate. (like Bing translator)</p>
         <p class="info">This is pretty old and crappy project written in PHP. Pressing the button above sometimes throws random errors. If that happens, just try again and it might work fine... I might look into this some time in the future when I have extra time.</p>
         <div id="settings">
             <form>
