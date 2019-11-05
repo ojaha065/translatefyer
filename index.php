@@ -31,6 +31,7 @@
             <p><b>But why?</b> I dunno, for fun, I guess? This project was heavily inspired by the popular <a href="https://www.youtube.com/watch?v=957K58gMbPA" target="_blank">Google Translate Sings</a> videos by the YouTube channel <a href="https://www.youtube.com/channel/UCP2-S6-M9ZvlY8t7cRn4O6A" target="_blank">Translator fails</a>.</p>
             <p><b>How does it work?</b> It's just using <a href="https://cloud.google.com/translate/" target="_blank">Google's translation API</a>. For more technical details, you can check it's <a href="https://github.com/ojaha065/translatefyer" target="_blank">GitHub page</a>.</p>
             <p><b>Who is/are behind this? I want to contact you. How I can do that?</b> I'm just a IT-student from Finland. Feel free to to shoot me an email: haiko.jani [at] gmail [dot] com.</p>
+            <p id="noticeAboutLimits"><b>Update 11/2019:</b> Due to the increased pricing of Google Cloud Translation, I implemented a new limitation. Only 2000 characters can be processed per day. <strong>This limit is shared between all users</strong>. If you get an error message, please try again after 24 hrs. I'm really sorry about this, and I'm currently considering alternatives for Google Translate. (like Bing translator)</p>
         </div>
         <textarea id="sourceText" maxlength="1200" placeholder="Type or paste here." required></textarea>
         <small id="errorArea"></small>
@@ -42,7 +43,8 @@
             <button type="button" id="translatefyButton" disabled>Translatefy!</button>
             <button type="reset" id="clearButton">Clear</button>
         </div>
-        <p class="info">This is pretty old and crappy project written in PHP. Pressing the button above sometimes throws random errors. If that happens, just try again and it usually works fine... I might look into this some time in the future when I have extra time.</p>
+        <p id="noticeAboutLimits" class="info"><b>Update 11/2019:</b> Due to the increased prises of Google Translate API, I implemented a new limitation. Only 2000 characters per day can be processed. This limit is shared between all users. If you get an error message, please try again after 24 hrs. I'm really sorry about this, and I'm currently considering alternatives for Google Translate. (like Bing translator)</p>
+        <p class="info">This is pretty old and crappy project written in PHP. Pressing the button above sometimes throws random errors. If that happens, just try again and it might work fine... I might look into this some time in the future when I have extra time.</p>
         <div id="settings">
             <form>
                 <fieldset>

@@ -45,6 +45,10 @@ small{
     margin: 10px 0 5px 1%;
 }
 
+#noticeAboutLimits{
+    color: red;
+}
+
 #settings{
     width: 100%;
     float: left;
