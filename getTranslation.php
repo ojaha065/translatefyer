@@ -29,7 +29,7 @@
         echo json_encode($dataToSend);
         die();
     }
-    if(strlen($_POST["sourceText"]) > 1200 || $_POST["iterations"] > 10){
+    if(strlen($_POST["sourceText"]) > 1000 || $_POST["iterations"] > 4){
         $dataToSend["code"] = 413;
         $dataToSend["status"] = "Payload Too Large";
         $dataToSend["reason"] = "The input is too long";

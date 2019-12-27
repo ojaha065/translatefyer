@@ -68,9 +68,9 @@ $(document).ready(function(){
     });
 
     $("#sourceText").on("change keyup paste",function(){
-        if($(this).val().length > 1100){
+        if($(this).val().length > 900){
             translatefyButton.prop("disabled",true);
-            $("#errorArea").html("Maximum length of the input is 1200 characters. You have used " + $("#sourceText").val().length + " characters.<br />").show();
+            $("#errorArea").html("Maximum length of the input is 1000 characters. You have used " + $("#sourceText").val().length + " characters.<br />").show();
         }
         else if($(this).val().length < 5){
             translatefyButton.prop("disabled",true);
