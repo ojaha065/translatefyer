@@ -68,3 +68,10 @@ fieldset{
     right: 0;
     border: 0;
 }
+
+.fa-telegram{
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
+    color: #0088cc;
+}
