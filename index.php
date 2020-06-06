@@ -21,16 +21,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css" media="all" />
         <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script src="languageCodes.js" async></script>
         <script src="scripts.js"></script>
-        <script>
-            "use strict";
-            (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: null // HIDDEN FOR GITHUB,
-                enable_page_level_ads: true
-            });
-        </script>
     </head>
     <body>
         <div class="info">
